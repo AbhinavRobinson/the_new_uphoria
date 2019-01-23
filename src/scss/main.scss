@@ -3,7 +3,7 @@ $colors:(
     'accent':#fff
 );
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 
 @import 'viewports';
 
@@ -17,10 +17,49 @@ $colors:(
 }
 
 body{
-    background-color: lighten($color: #00f, $amount: 0.7);
-    height:100px;
-}
-
-::placeholder{
-    color: gray;
-}
+    font-family: 'Montserrat',sans-serif;
+    color:#fff;
+    background-color: #000;
+    width:100%;
+    section.top{
+        overflow: hidden;
+        .container{
+            overflow: hidden;
+                width: 80%;
+                margin:0 auto;
+                height:100vh;
+                @include query(tablet-potrait){width: 100%;}
+                @include query(smart-phone){width: 100%;}
+                @include query(tablet-landscape){width: 100%;}
+                nav{
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    margin:4vh 0;
+                    height:2.5vh;
+                    font-size: 1.4vh;
+                    float:left;
+                    width:100%;
+                    display: flex;
+                    align-items: center;
+                    .menu{
+                        flex-grow: 2;
+                        display: flex;
+                        overflow: hidden;
+                        .menu-item{
+                            flex-grow: 1;
+                            p{text-align: center;}
+                        }
+                    }
+                    .menu-left{.menu-item{p{text-align: left;}}}
+                    .menu-right{.menu-item{p{text-align: right;}}}
+                    .menu-right{flex-grow: 2;}
+                    .logo{
+                        font-size: 2vh;
+                        flex-grow: 2;p{text-align: center;}}
+                }
+                main{
+                    
+                }
+            }
+    }
+}   
