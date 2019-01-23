@@ -87,7 +87,8 @@ body {
         body section .container footer p {
           text-transform: uppercase;
           font-weight: 100; }
-          body section .container footer p span {
+          body section .container footer p span img {
+            background: white;
             width: 1.4vh; }
   body section.top .container main {
     width: 80vw;
