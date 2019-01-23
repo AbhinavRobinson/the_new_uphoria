@@ -3,7 +3,7 @@ $colors:(
     'accent':#fff
 );
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700');
 
 @import 'viewports';
 
@@ -16,6 +16,13 @@ $colors:(
     margin:0;
 }
 
+.black{
+    font-weight: 500;
+    }
+.narrow{
+    font-weight: 100;
+}
+
 body{
     font-family: 'Montserrat',sans-serif;
     color:#fff;
@@ -25,12 +32,12 @@ body{
         overflow: hidden;
         .container{
             overflow: hidden;
-                width: 80%;
+                width: 80vw;
                 margin:0 auto;
                 height:100vh;
-                @include query(tablet-potrait){width: 100%;}
-                @include query(smart-phone){width: 100%;}
-                @include query(tablet-landscape){width: 100%;}
+                // @include query(tablet-potrait){width: 10vw;}
+                // @include query(smart-phone){width: 100vw;}
+                // @include query(tablet-landscape){width: 100vw;}
                 nav{
                     text-transform: uppercase;
                     font-weight: 700;
@@ -57,7 +64,20 @@ body{
                         font-size: 2vh;
                         flex-grow: 2;p{text-align: center;}}
                 }
-                main{}
+                main{
+                    width:80vw;
+                    float:left;
+                    position: absolute;
+                    top:50%;
+                    transform: translateY(-50%);
+                    display: flex;
+                    .heading{
+                        width:50%;
+                        p{
+                            font-size: 15vh;   
+                        }
+                    }
+                }
             }
     }
 }   

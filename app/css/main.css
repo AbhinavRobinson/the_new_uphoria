@@ -1,7 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700");
 * {
   padding: 0;
   margin: 0; }
+
+.black {
+  font-weight: 500; }
+
+.narrow {
+  font-weight: 100; }
 
 body {
   font-family: 'Montserrat',sans-serif;
@@ -12,18 +18,9 @@ body {
     overflow: hidden; }
     body section.top .container {
       overflow: hidden;
-      width: 80%;
+      width: 80vw;
       margin: 0 auto;
-      height: 100vh;
-      /*  ##Device = Laptops, Desktops
-        ##Screen = B/w 1025px to 1280px */
-      /*  ##Device = Laptops, Desktops
-        ##Screen = B/w 1025px to 1280px */
-      /*  ##Device = Laptops, Desktops
-        ##Screen = B/w 1025px to 1280px */ }
-      @media (min-width: 320px) and (max-width: 480px) {
-        body section.top .container {
-          width: 100%; } }
+      height: 100vh; }
       body section.top .container nav {
         text-transform: uppercase;
         font-weight: 700;
@@ -74,3 +71,18 @@ body {
           flex-grow: 2; }
           body section.top .container nav .logo p {
             text-align: center; }
+      body section.top .container main {
+        width: 80vw;
+        float: left;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        body section.top .container main .heading {
+          width: 50%; }
+          body section.top .container main .heading p {
+            font-size: 15vh; }
