@@ -31,6 +31,7 @@ body{
     section.top{
         overflow: hidden;
         .container{
+            position: relative;
             overflow: hidden;
                 width: 80vw;
                 margin:0 auto;
@@ -77,6 +78,27 @@ body{
                             font-size: 15vh;   
                         }
                     }
+                }
+                .quote{
+                    width: 40vw;
+                    p.outer{
+                    }
+                    position: absolute;
+                    top:calc(50% + 25vh);
+                    transform: translateY(calc(-50%));
+                    p.top{
+                        font-weight: 600;
+                    }
+                    p.bottom{
+                        // float:right;
+                    }
+                }
+
+                footer{
+                    position:absolute;
+                    bottom:0;
+                    margin-bottom: 4vh;
+                    width:80vw;
                 }
             }
     }
