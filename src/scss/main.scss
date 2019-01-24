@@ -23,6 +23,13 @@ $colors:(
     font-weight: 100;
 }
 
+canvas {
+    // display: -webkit-inline-flex;
+    // width: 100%;
+    // height:100%;
+    // position: absolute;
+}
+
 body{
     font-family: 'Montserrat',sans-serif;
     color:#fff;
@@ -119,8 +126,6 @@ body{
                         // float:right;
                     }
                 }
-
-
             }
     }
 }   
