@@ -23,7 +23,7 @@ function createWorld() {
   _height= window.innerHeight-150;
   //---
   scene = new THREE.Scene();
-//   scene.fog = new THREE.Fog(Theme._darkred, 8, 20);
+  // scene.fog = new THREE.Fog(Theme._darkred, 8, 20);
   scene.background = new THREE.Color(Theme._darkred);
   //---
   camera = new THREE.PerspectiveCamera(50, _width/_height, 1, 500);

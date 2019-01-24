@@ -9,6 +9,9 @@
 .narrow {
   font-weight: 100; }
 
+canvas {
+  display: -webkit-inline-flex; }
+
 body {
   font-family: 'Montserrat',sans-serif;
   color: #fff;
