@@ -9,9 +9,6 @@
 .narrow {
   font-weight: 100; }
 
-canvas {
-  display: -webkit-inline-flex; }
-
 body {
   font-family: 'Montserrat',sans-serif;
   color: #fff;
@@ -116,3 +113,12 @@ body {
     transform: translateY(calc(-50%)); }
     body section.top .container .quote p.top {
       font-weight: 600; }
+  body section.top .container .blob {
+    margin: 0 0;
+    width: 50vw;
+    float: right;
+    position: relative;
+    z-index: -9999;
+    top: 50%;
+    -webkit-transform: translateX(15%) translateY(-65%);
+    transform: translateX(15%) translateY(-65%); }
