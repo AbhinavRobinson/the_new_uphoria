@@ -9,10 +9,19 @@
     <script src="app/js/main.babel.min.js"></script>
     <script src="app/js/index.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="app/css/main.min.css" />
+    <script src="app/assests/jquery-3.2.1.js"></script>
+    <script src="app/assests/jquery.scrollify.js"></script>
+    <script>
+    $(function() {
+            $.scrollify({
+                section : ".scroller",
+            });
+    });   
+    </script>
 </head>
 
 <body>
-    <section class="top">
+    <section class="top scroller">
         <div class="container">
             <nav>
                 <div class="menu menu-left">
@@ -324,7 +333,7 @@
             </footer>
         </div>
     </section>
-    <section class="about">
+    <section class="about scroller">
         <div class="container">
             <nav>
                 <div class="menu menu-left">
