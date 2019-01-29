@@ -7,9 +7,9 @@
     <title>Uphoria 2k19</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="app/js/main.babel.min.js"></script>
-    <!-- <script src="app/js/index.js"></script> -->
-    <link rel="stylesheet" type="text/css" media="screen" href="app/css/main.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="app/css/main.css" />
     <script src="app/assests/jquery-3.2.1.js"></script>
+    <script src="app/js/index.js"></script>
     <script src="app/assests/jquery.scrollify.js"></script>
     <script>
     $(function() {
@@ -52,26 +52,49 @@
                         <p>Register</p>
                     </div>
                 </div>
+                <div class="menu-tab">
+                    <div id="one"></div>
+                    <div id="two"></div>
+                    <div id="three"></div>
+                </div>
+                <div class="menu-hide">
+                  <nav>
+                    <ul>
+                      <li><a href="#">Link One</a></li>
+                      <li><a href="#">Link Two</a></li>
+                      <li><a href="#">Link Three</a></li>
+                      <li><a href="#">Link Four</a></li>
+                    </ul>
+                  </nav>
+                </div>
             </nav>
             <main>
                 <div class="heading">
                     <p>
-                        <span class="black">Uphoria</span>
-                        <span class="narrow">2k19</span>
+                        <span class="black">UPHORIA</span>
+                        <span class="narrow">2K19</span>
                     </p>
                 </div>
             </main>
             <div class="quote">
                 <p class="outer"></p>
-                <p class="top">“If it can be destroyed by the truth, it deserves to be destroyed by the truth.”
+                <p class="top">
+                    “The cosmos is within us. We are made of star-stuff. We are a way for the universe to know itself.” 
                 </p>
                 <p class="bottom">-Carl Sagan</p>
                 </p>
             </div>
-            <video class="blob" no-controls autoplay loop>
+            <video id="blob" class="blob" no-controls autoplay muted loop>
                 <source src="./app/assests/hero.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <script>
+                  document.addEventListener('load',()=>{
+                      let video = document.getElementById('blob')
+                      video.autoplay=true;
+                      video.load();
+                  })
+              </script>
             <!-- <script id="vertexShader" type="x-shader/x-vertex">
                 //
                 // GLSL textureless classic 3D noise "cnoise",
