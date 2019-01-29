@@ -133,22 +133,25 @@ body section.top .container .blob {
   }
   body section.top .container .blob {
     /* visibility: hidden; */
-    margin: 0 0;
-    padding: 0;
+    /* margin: 0 0; */
+    /* padding: 0; */
     width: 120vw;
     top: 0;
     position: relative;
     z-index: -999;
     float: left;
-    transform: translateX(-18vw) translateY(8vh);
+    transform: translateX(-18vw) translateY(10vh);
   }
-  body section.top .container nav{
+  body section.top .container nav .menu{
     visibility: hidden;
     display: inline;
   }
   body section.top .container nav .logo{
     visibility: visible;
+    display: inline;
     font-size: 5vh;
+    /* top: 50%; */
+    padding-top: 100px;
   }
   body section.top .container main .heading{
     visibility: hidden;
@@ -159,7 +162,12 @@ body section.top .container .blob {
   body section.top .container nav .menu-tab{
     visibility: visible;
   }
-
+  body section.top .container nav .menu-tab.active{
+    visibility: visible;
+  }
+  body section.top .container nav .menu-hide.show{
+    visibility: visible;
+  }
   /* ABOUT SECTION */
   
   body section.about .container main .heading p {
@@ -170,11 +178,14 @@ body section.top .container .blob {
   }
   body section.about .container nav{
     visibility: hidden;
-    display: inline;
+    /* display: inline; */
   }
   body section.about .container nav .logo{
     visibility: visible;
+    display: inline;
     font-size: 5vh;
+    /* top: 50%; */
+    padding-top: 100px;
   }
   body section.about .container main .heading{
     visibility: hidden;
@@ -187,11 +198,11 @@ body section.top .container .blob {
   height: 70px;
   position: fixed;
   z-index: 100;
-  top: 0px;
+  top: 10px;
   left: 0px;
   cursor: pointer;
   transition: all .6s ease-in-out;
-  visibility: hidden;
+  /* visibility: hidden; */
   /*end of div*/
 }
 .menu-tab div {
@@ -208,9 +219,10 @@ body section.top .container .blob {
 
 /*end of menu-tab*/
 .menu-tab.active {
-  left: 345px;
+  left: 80vw;
+  /* top: 100px; */
   transition: all 600ms ease-in-out;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(205deg, rgba(98, 0, 255, 0), rgba(98, 0, 255, 0.05));
   visibility: visible;
 }
 .menu-tab.active #one {
@@ -227,20 +239,22 @@ body section.top .container .blob {
 }
 .menu-tab.active #three {
   -webkit-transform: translateY(-9px) rotate(-45deg);
-          transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
   transition: all .6s ease-in-out;
   background-color: #e74c3c;
   visibility: visible;
 }
 
 .menu-hide {
-  width: 345px;
-  left: -345px;
+  width: 80vw;
+  left: -80vw;
   height: 100vh;
+  /* margin-top: 100px; */
+  top: 0px;
   visibility: hidden;
   position: fixed;
   z-index: 10;
-  top: 0px;
+  /* top: 0px; */
   transition: all .6s ease-in-out;
   /*end of nav*/
 }
@@ -251,19 +265,26 @@ body section.top .container .blob {
   /*end of li*/
 }
 .menu-hide nav ul li {
+  /* top: 100px; */
   height: 70px;
   list-style-type: none;
   text-align: center;
   line-height: 70px;
   transition: all .5s ease;
 }
+.menu-hide nav ul li:first-child{
+  line-height: 200px;
+  height: 200px;
+}
 .menu-hide nav ul li:hover {
-  background-color: #e74c3c;
+  background-color:rgba(151, 87, 255, 0.5);
   transition: all .5s ease;
   visibility: visible;
 }
 .menu-hide nav ul li a {
-  padding: 30px 25px;
+  padding: 30px 28.5vw;
+  font-size: 1.4em;
+  text-shadow: #000 0px 0px 5px;
   text-decoration: none;
   color: #f1f1f1;
   font-weight: 800;
@@ -272,7 +293,7 @@ body section.top .container .blob {
 /*end of menu-hide*/
 .menu-hide.show {
   left: 0px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(205deg, rgba(153, 0, 255,0), rgb(98, 0, 255));
   transition: all .6s ease-in-out;
   visibility: visible;
 }
