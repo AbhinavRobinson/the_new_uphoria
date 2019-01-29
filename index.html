@@ -84,10 +84,17 @@
                 <p class="bottom">-Carl Sagan</p>
                 </p>
             </div>
-            <video class="blob" no-controls autoplay loop>
+            <video id="blob" class="blob" no-controls autoplay muted loop>
                 <source src="./app/assests/hero.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
+              <script>
+                  document.addEventListener('load',()=>{
+                      let video = document.getElementById('blob')
+                      video.autoplay=true;
+                      video.load();
+                  })
+              </script>
             <!-- <script id="vertexShader" type="x-shader/x-vertex">
                 //
                 // GLSL textureless classic 3D noise "cnoise",
