@@ -13,7 +13,9 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: #fff;
-  background-color: #000;
+  background: url('../../app/assests/three-blur-color.jpg') no-repeat;
+  background-size: 100%;
+  background-position-y: -200px;
   width: 100%;
 }
 body section {
@@ -98,7 +100,8 @@ body section.top .container main .heading {
   width: 50%;
 }
 body section.top .container main .heading p {
-  font-size: 15vh;
+  font-weight: 200;
+  font-size: 7.5vh;
 }
 body section.top .container .quote {
   width: 40vw;
@@ -111,12 +114,17 @@ body section.top .container .quote p.top {
 }
 body section.top .container .blob {
   margin: 0 0;
-  width: 50vw;
+  width: 35vw;
   float: right;
+  min-width: 500px;
+  max-width: 650px;
+  height: 100%;
+  background: url("../../app/assests/three.jpg") no-repeat;
+  background-size: 125%;
   position: relative;
   z-index: -9999;
   top: 50%;
-  transform: translateX(15%) translateY(-65%);
+  transform: translateX(-25%) translateY(-40%);
 }
 
 
@@ -124,23 +132,28 @@ body section.top .container .blob {
 
 @media only screen and (max-width: 800px) {
   /* TOP */
+
+  body{
+    background-size: 400%;
+  }
  
   body section.top .container main .heading p {
     font-size: 15vw;
   }
   body section.top .container{
     align-items: center;
+    justify-content: center;
   }
   body section.top .container .blob {
-    /* visibility: hidden; */
-    /* margin: 0 0; */
-    /* padding: 0; */
-    width: 120vw;
+    display: flex;
+    width: 75vw;
+    max-width: 1000px;
+    min-width: 0px;
     top: 0;
     position: relative;
     z-index: -999;
     float: left;
-    transform: translateX(-18vw) translateY(10vh);
+    transform: translateX(2.5vw) translateY(10vh);
   }
   body section.top .container nav .menu{
     visibility: hidden;
@@ -150,7 +163,6 @@ body section.top .container .blob {
     visibility: visible;
     display: inline;
     font-size: 5vh;
-    /* top: 50%; */
     padding-top: 100px;
   }
   body section.top .container main .heading{
@@ -178,7 +190,6 @@ body section.top .container .blob {
   }
   body section.about .container nav{
     visibility: hidden;
-    /* display: inline; */
   }
   body section.about .container nav .logo{
     visibility: visible;
@@ -192,6 +203,29 @@ body section.top .container .blob {
   }
 }
 
+@media only screen and (max-width: 800px) and (min-width: 513px){
+  body section.top .container .blob {
+    max-width: 384px;
+    width: 35vw;
+    padding-right: 33.33vw;
+    transform: translateX(5vw) translateY(10vh);
+  }
+}
+
+@media only screen and (max-width: 1310px) and (min-width: 801px){
+  body{
+    background-size: 200%;
+  }
+}
+
+/* @media only screen and (max-width: 780px) and (max-height: 780px){ */
+  /* body section.top .container .blob { */
+    /* max-width: 384px; */
+    /* width: 30vh; */
+    /* padding-right: 33.33vw; */
+    /* transform: translateX(5vw) translateY(10vh); */
+  /* } */
+/* } */
 
 .menu-tab {
   width: 90px;
@@ -202,7 +236,6 @@ body section.top .container .blob {
   left: 0px;
   cursor: pointer;
   transition: all .6s ease-in-out;
-  /* visibility: hidden; */
   /*end of div*/
 }
 .menu-tab div {
@@ -220,7 +253,6 @@ body section.top .container .blob {
 /*end of menu-tab*/
 .menu-tab.active {
   left: 80vw;
-  /* top: 100px; */
   transition: all 600ms ease-in-out;
   background: linear-gradient(205deg, rgba(98, 0, 255, 0), rgba(98, 0, 255, 0.05));
   visibility: visible;
@@ -249,12 +281,10 @@ body section.top .container .blob {
   width: 80vw;
   left: -80vw;
   height: 100vh;
-  /* margin-top: 100px; */
   top: 0px;
   visibility: hidden;
   position: fixed;
   z-index: 10;
-  /* top: 0px; */
   transition: all .6s ease-in-out;
   /*end of nav*/
 }
@@ -265,7 +295,6 @@ body section.top .container .blob {
   /*end of li*/
 }
 .menu-hide nav ul li {
-  /* top: 100px; */
   height: 70px;
   list-style-type: none;
   text-align: center;
